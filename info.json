@@ -1,0 +1,15 @@
+{
+    "msg":"Welcome To Virtual Classroom",
+    "author":"Anvit Dave",
+    "email":"daveanvit@gmail.com,202012118@daiict.ac.in",
+    "Base URL":"https://toddle-virtual-classroom.herokuapp.com/",
+    "API":[
+        "PATH /signin (POST) :- (tutor,student) users can signin and get token.(Public)",
+        "PATH /assignment (GET) :- (tutor,student) students and tutor can get their assignments *filter options* are includedn in this api.(Protected)",
+        "PATH /assignment (POST) :- (tutor) tutor can add new assignments.(Protected)",
+        "PATH /assignment (PUT):- (tutor) tutor can update existing assignments.(Protected)",
+        "PATH /assignment (DELETE):- (tutor) tutor can delete existing assignments.(Protected)",
+        "PATH /submission (GET) :- (tutor,student) student will get his/her all submission and tutor will get submissions of his/her assignmets from all students.(Protected)",
+        "PATH /submission (POST):- (student) student can submit his/her assignment on this route.(Protected)"
+    ]
+}

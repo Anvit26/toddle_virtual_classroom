@@ -1,6 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const dbkey = require('./keys');
+const dbkey = require("./keys");
+const info = require("./info.json");
 
 // Routes
 const assignment = require('./routes/assignment');
@@ -17,6 +18,9 @@ mongoose.connect(dbkey.DB_URL,{
     useNewUrlParser:true,
     useCreateIndex:true,
 });
+app.get("/",(req,res)=>{
+    return res.status(200).json(info);
+})
 
 app.use("/signin",user);            //Sign in  routes for user signin
 app.use("/assignment",assignment);  //POST:- / (add assignment) GET:- /(get assignment)(student,tutor) DELETE:- / (delete assignment)PUT:- / (update assignment)
